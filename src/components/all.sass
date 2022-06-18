@@ -1,30 +1,41 @@
 @import "~bulma/sass/utilities/initial-variables"
-
+html
+  overflow-y: auto !important
 body
   background: #E4E4E4 !important
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #D64000
 $kaldi-red-invert: #fff
-
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #2b2523
+$black: #E4E4E4
+
+input:focus 
+  outline: none
+textarea:focus 
+  outline: none
 
 .navbar
     height: 130px
     background: #E4E4E4 !important
     display: flex
     align-items: center
+    @media screen and (max-width: 1023px)
+      height: auto
 .navbar-content
   border-bottom: 1px solid #494949
+  @media screen and (max-width: 1023px)
+   border-bottom: none
 .navbar-item img
   max-height: 52px !important
 .navbar .navbar-menu
   box-shadow: none !important
   align-items: center !important
   margin-right: 0 !important
+  @media screen and (max-width: 1023px)
+    background: #E4E4E4 !important
 .navbar-start
   align-items: center !important
 .navbar-start .navbar-item
@@ -37,9 +48,14 @@ $black: #2b2523
   color: #78599E !important
 .navbar-item:hover
   color: #78599E !important
+  @media screen and (max-width: 1023px)
+    background: #E4E4E4 !important
 .navbar-line
   height: 15px
   border-right: 1px solid #494949
+  @media screen and (max-width: 1023px)
+    display: none
+  
 .navbar .container
   display: flex
   justify-content: space-between !important
@@ -52,20 +68,7 @@ $black: #2b2523
   width: 100%
 
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+
 
 // Helper Classes
 .full-width-image-container
@@ -120,9 +123,13 @@ $black: #2b2523
 .navbar-brand .navbar-item.logo
   // padding: 0 1rem
 footer.footer
-  padding: 3rem 0rem 0rem
+  padding: 17px 0px
+  text-align: center
+  font-size: 16px
+  color: #68665F !important
   background-color: transparent
-
+  @media screen and (max-width: 1023px)
+    padding: 17px 30px
 //Menu overrides
 $menu-item-color: $white-ter
 $menu-item-hover-color: $black !important
@@ -177,3 +184,275 @@ $menu-label-color: $white-ter
     text-align: center
     max-width: 70%
     margin: 0 0 1em
+
+
+// about
+.about
+  padding: 70px 0px 100px
+  min-height: calc( 100vh - 188px )
+  font-family: 'Roboto Mono'
+  @media screen and (max-width: 1023px)
+    min-height: calc( 100vh - 110px )
+.about .header
+  display: flex
+  align-items: center
+  justify-content: space-between
+  flex-wrap: wrap
+  @media screen and (max-width: 1216px)
+    justify-content: center
+.about .header-left
+  @media screen and (max-width: 1216px)
+    text-align: center
+.about .title
+  font-weight: 700
+  font-size: 40px
+  line-height: 47px
+  color: #494949
+  margin-bottom:22px
+  @media screen and (max-width: 1023px)
+    padding: 0 30px
+.about .title-right
+   font-weight: 400
+.about .desc
+  font-size: 30px
+  line-height: 35px
+  color: #220932
+  @media screen and (max-width: 1023px)
+    padding: 0 30px
+.about .desc-right
+  color: #78599E
+.about .form
+  position: relative
+  width: 436px
+  height: 230px
+  @media screen and (max-width: 1216px)
+    margin-top: 50px
+  @media screen and (max-width: 500px)
+    margin: 50px 30px 0px
+    width: 100%
+.about .font
+  // position: absolute
+  // z-index: 1
+  // top: 0px
+  // left: 0px
+  width: 436px
+  height: auto
+  padding: 35px
+  text-align: center
+  background: #F0ECE0
+  @media screen and (max-width: 500px)
+    height: auto
+    width: 100%
+// .about .absolute
+//   position: absolute
+//   top: 5px
+//   left: 5px
+//   width: 436px
+//   height: 230px
+//   background: #E0D6B8
+//   @media screen and (max-width: 500px)
+//     display: none
+.about .formTitle
+  font-size: 20px
+  line-height: 27px
+  color: #78599E
+.about .aboutInput 
+  height: 50px
+  width: calc(100% - 4px) 
+  font-size:20px
+  padding: 10px
+  margin-top: 10px
+  margin-bottom: 20px
+
+.about .aboutButton
+  background: #77599E
+  font-size: 20px
+  color: #FFFFFF
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  line-height: 27px
+  cursor: pointer
+.about .description
+  margin-top: 60px
+  font-size: 20px
+  line-height: 30px
+  color: #78599E
+  @media screen and (max-width: 1023px)
+    padding: 0 30px
+// about
+
+// portfolio
+.portfolio
+  padding: 0px 0px 70px
+  min-height: calc( 100vh - 188px )
+  font-family: 'Roboto Mono'
+  @media screen and (max-width: 1023px)
+    min-height: calc( 100vh - 110px )
+.portfolio .portfolio-title
+  margin-left: 8px
+.portfolio .portfolio-titleText
+  margin-top: 70px
+  font-weight: 600
+  color: #78599E
+  font-size: 25px
+  line-height: 33px
+  margin-bottom: 15px
+  @media screen and (max-width: 1023px)
+    text-align: center
+.portfolio .portfolio-line
+  width: 288px
+  border-bottom: 5px solid #78599E
+  margin-bottom: 20px
+  font-size: 20px
+  line-height: 24px
+  text-align: center
+  color: #78599E
+  @media screen and (max-width: 1023px)
+    margin: 0 auto 20px
+.portfolio .portfolio-list
+  display: flex
+  flex-wrap: wrap
+  @media screen and (max-width: 1023px)
+    padding: 0 30px
+    justify-content: center
+.portfolio .portfolio-item
+  width: 252px
+  height: 207px
+  background: #F0ECE0
+  margin: 8px
+  color: #78599E
+  text-align: center
+.portfolio .portfolio-item-img
+    width: 150px
+
+.portfolio .portfolio-item-top
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 180px
+// portfolio
+
+// contact
+.contact
+  padding: 40px 0px 100px
+  min-height: calc( 100vh - 188px )
+  font-family: 'Roboto Mono'
+  @media screen and (max-width: 1023px)
+    min-height: calc( 100vh - 110px )
+.contact .header
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: 1023px)
+    flex-direction: column
+    align-items: center
+.contact .header-left
+  width: 436px
+  @media screen and (max-width: 500px)
+    margin: 0 30px
+    width: calc( 100% - 60px )
+.contact .header-left-title
+  margin-top: 30px
+  margin-bottom: 20px
+  font-size: 25px
+  line-height: 33px
+  color: #78599E
+.contact .header-left-line
+  width: 220px
+  border-bottom: 5px solid #78599E
+  margin-bottom: 30px
+.contact .header-left-link
+  display: flex
+  align-items: center
+  height: 33px
+  font-size: 18px
+  line-height: 33px
+  color: #494949
+  flex-wrap: wrap
+.contact .header-left-link img
+  width: 28px
+  margin-right: 13px
+.contact .marginTop
+  margin-top:60px 
+.contact .marginBottom
+  margin-bottom:20px 
+.contact .form
+  position: relative
+  width: 436px
+  height: auto
+  @media screen and (max-width: 1023px)
+    margin-top: 50px
+  @media screen and (max-width: 500px)
+    margin: 50px 30px 0px
+    width: calc( 100% - 60px )
+.contact .font
+  width: 436px
+  padding: 35px
+  text-align: left
+  background: #F0ECE0
+  @media screen and (max-width: 500px)
+    width: 100%
+// .contact .absolute
+//   position: absolute
+//   top: 5px
+//   left: 5px
+//   width: 436px
+//   height: 230px
+//   background: #E0D6B8
+//   @media screen and (max-width: 500px)
+//     display: none
+.contact .formTitle
+  font-weight: 700
+  font-size: 25px
+  line-height: 27px
+  margin-bottom: 30px
+  color: #78599E
+.contact .formName
+  display: flex
+.contact .inputTitle
+  font-size: 15px
+  line-height: 33px
+  color: #78599E
+.contact .firstName .aboutInput
+  width: 180px
+  height: 30px
+  margin-right: 12px 
+.contact .lastName .aboutInput
+  width: 180px
+  height: 30px
+.contact .email .emailInput
+  font-size: 20px
+  height: 38px
+  width: 100%
+  padding: 10px
+
+.contact  .messageName .messageInput
+  font-size: 20px
+  height: 120px !important
+  width: 100% !important
+  resize: none
+  padding: 10px
+
+.contact .aboutInput 
+  height: 50px
+  width: 100% 
+  font-size:20px
+  padding: 10px
+  margin-top: 10px
+  margin-bottom: 20px
+
+.contact .contactButton
+  margin-top: 20px
+  background: #77599E
+  font-size: 20px
+  color: #FFFFFF
+  height: 40px
+  display: flex
+  align-items: center
+  justify-content: center
+  line-height: 27px
+  cursor: pointer
+// contact
+
+
