@@ -8,6 +8,30 @@ description: The Coffee Taster’s Flavor Wheel, the official resource used by c
 tags:
   - flavor
   - tasting
+leftList:
+  title: Crypto Master Fund
+  list:
+    - image: /img/item-img.jpeg
+      text: >
+       Alchemix
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix1
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix2
+rightList:
+  title: Crypto Master Fund
+  list:
+    - image: /img/item-img.jpeg
+      text: >
+       Alchemix
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix1
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix2
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 

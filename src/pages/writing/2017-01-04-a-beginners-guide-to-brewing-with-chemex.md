@@ -8,6 +8,30 @@ description: Brewing with a Chemex probably seems like a complicated, time-consu
 tags:
   - brewing
   - chemex
+leftList:
+  title: Crypto Master Fund
+  list:
+    - image: /img/item-img.jpeg
+      text: >
+       Alchemix
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix1
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix2
+rightList:
+  title: Crypto Master Fund
+  list:
+    - image: /img/item-img.jpeg
+      text: >
+       Alchemix
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix1
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix2
 ---
 ![chemex](/img/chemex.jpg)
 

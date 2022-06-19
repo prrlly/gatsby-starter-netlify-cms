@@ -7,7 +7,6 @@ import { getImage, GatsbyImage } from "gatsby-plugin-image";
 
 // eslint-disable-next-line
 export const ProductPageTemplate = ({frontmatter}) => {
-  console.log(frontmatter.CryptoMasterFund.list);
   const list = [
     {
       image: ItemImg,

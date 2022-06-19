@@ -334,6 +334,114 @@ $menu-label-color: $white-ter
   height: 180px
 // portfolio
 
+// writing
+.writing
+  padding: 40px 0px 100px
+  min-height: calc( 100vh - 188px )
+  font-family: 'Roboto Mono'
+  @media screen and (max-width: 1023px)
+    min-height: calc( 100vh - 110px )
+.writing .header
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: 1023px)
+    flex-direction: column
+    align-items: center
+.writing .header-left
+  width: 632px
+  @media screen and (max-width: 500px)
+    margin: 0 30px
+    width: calc( 100% - 60px )
+.writing .header-left-title
+  margin-top: 30px
+  margin-bottom: 20px
+  font-size: 25px
+  line-height: 33px
+  color: #78599E
+.writing .header-left-line
+  width: 220px
+  border-bottom: 5px solid #78599E
+  // margin-bottom: 10px 
+.writing .header-left-item
+  padding: 40px 0 16px
+  border-bottom: 1px solid #D9CBA1
+
+.writing .header-left-item-title
+  font-weight: 500
+  font-size: 24px
+  line-height: 28px
+  margin-bottom: 20px
+  color: #494949
+.writing .header-left-item-content
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 20px
+  line-height: 27px
+  color: #78599E
+.writing .header-left-more
+  font-size: 24px
+  line-height: 33px
+  color: #78599E
+  margin-top: 35px
+.writing .form
+  margin-top: 60px
+  position: relative
+  width: 466px
+  height: auto
+  background: #F0ECE0
+  padding: 20px
+  @media screen and (max-width: 1023px)
+    margin-top: 50px
+  @media screen and (max-width: 500px)
+    margin: 50px 30px 0px
+    width: calc( 100% - 60px )
+.writing .form-item
+  display: flex
+  background: #FFFCF3
+  border: 1px solid #E4DBBF
+  padding: 15px 60px 15px 15px
+  margin-bottom: 10px
+.writing .form-item-left
+  width: 40px
+  height: 40px
+  margin-right: 10px
+.writing .form-item-left img
+  border-radius: 50%
+.writing .form-item-right
+  width: 280px
+.writing .form-item-right-header
+  display: flex
+  justify-content: space-between
+.writing .form-item-name
+  font-weight: 700
+  font-size: 16px
+  line-height: 26px
+  color: #000000
+.writing .form-item-time
+  color: #9A9A9A
+  font-size: 14px
+  line-height: 26px
+.writing .form-item-altName
+  margin-bottom: 5px
+  font-size: 12px
+  line-height: 26px
+  color: #000000
+.writing .form-item-desc
+  font-size: 14px
+  line-height: 20px
+  color: #000000
+.writing .form-item-bigImg
+  margin-top: 8px
+.writing .form-button 
+  height: 32px
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #FFFCF3
+  border: 1px solid #E4DBBF
+// writing
+
 // contact
 .contact
   padding: 40px 0px 100px
