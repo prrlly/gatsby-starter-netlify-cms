@@ -2,7 +2,7 @@
 html
   overflow-y: auto !important
 body
-  background: #E4E4E4 !important
+  background: #FFFCF3 !important
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #D64000
@@ -10,7 +10,7 @@ $kaldi-red-invert: #fff
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #E4E4E4
+$black: #FFFCF3
 
 input:focus 
   outline: none
@@ -19,7 +19,7 @@ textarea:focus
 
 .navbar
     height: 130px
-    background: #E4E4E4 !important
+    background: #FFFCF3 !important
     display: flex
     align-items: center
     @media screen and (max-width: 1023px)
@@ -35,7 +35,7 @@ textarea:focus
   align-items: center !important
   margin-right: 0 !important
   @media screen and (max-width: 1023px)
-    background: #E4E4E4 !important
+    background: #FFFCF3 !important
 .navbar-start
   align-items: center !important
 .navbar-start .navbar-item
@@ -526,19 +526,23 @@ $menu-label-color: $white-ter
   width: 180px
   height: 30px
   margin-right: 12px 
+  @media screen and (max-width: 500px)
+  width: calc( 100% - 8px )
 .contact .lastName .aboutInput
   width: 180px
   height: 30px
+  @media screen and (max-width: 500px)
+  width: calc( 100% - 2px )
 .contact .email .emailInput
   font-size: 20px
   height: 38px
-  width: 100%
+  width: calc( 100% - 1px )
   padding: 10px
 
 .contact  .messageName .messageInput
   font-size: 20px
   height: 120px !important
-  width: 100% !important
+  width: calc( 100% - 1px ) !important
   resize: none
   padding: 10px
 
