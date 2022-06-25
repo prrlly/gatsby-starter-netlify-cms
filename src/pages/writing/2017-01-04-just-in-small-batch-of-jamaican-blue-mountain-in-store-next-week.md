@@ -11,6 +11,30 @@ tags:
   - green beans
   - flavor
   - tasting
+leftList:
+  title: Crypto Master Fund
+  list:
+    - image: /img/item-img.jpeg
+      text: >
+       Alchemix
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix1
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix2
+rightList:
+  title: Crypto Master Fund
+  list:
+    - image: /img/item-img.jpeg
+      text: >
+       Alchemix
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix1
+    - image: /img/item-img.jpeg
+      text: >
+        Alchemix2
 ---
 
 We expect the shipment of a limited quantity of green beans next Monday. We’ll be offering the roasted beans from Tuesday, but quantities are limited, so be quick.
