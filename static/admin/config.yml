@@ -26,6 +26,7 @@ collections:
           default: "blog-post",
         }
       - { label: "Title", name: "title", widget: "string" }
+      - { label: "author", name: "author", widget: "string", default: "Principle Ventures" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       # - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
@@ -33,10 +34,11 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
       # - { label: "Tags", name: "tags", widget: "list" }
   - name: "portfolio"
+    identifier_field: name 
     label: "portfolio"
     folder: "src/pages/portfolio"
     create: true
-    flug: "{{name}}-{{slug}}"
+    slug: "{{fields.name}}-{{fields.type}}"
     fields:
       - {
           label: "Template Key",
