@@ -1,5 +1,5 @@
 ---
 name: STEPN
-type: Crypto Master Fund
+type: Non-Fungible Collective
 image: /img/logo.svg
 ---
