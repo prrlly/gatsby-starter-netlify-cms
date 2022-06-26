@@ -1,5 +1,5 @@
 ---
-templateKey: 'product-page'
+templateKey: 'portfolio-page'
 path: /portfolio
 title: Our Coffee
 image: /img/jumbotron.jpg
