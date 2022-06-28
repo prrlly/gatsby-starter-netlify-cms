@@ -12,6 +12,23 @@ const Navbar = class extends React.Component {
     };
   }
 
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }  
+
+  handleScroll=(event)=>{
+    let scrollTop  = document.documentElement.scrollTop;  //滚动条滚动高度
+    let nav = document.getElementById("navbar");
+    if(typeof window !== 'undefined' && window.innerWidth > 1023){
+      if(scrollTop>80){
+        nav.style.height = '70px'
+      }else{
+        nav.style.height = '140px'
+      }
+    }
+
+}
+
   toggleHamburger() {
     // toggle the active boolean in the state
     this.setState(
@@ -38,6 +55,7 @@ const Navbar = class extends React.Component {
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
+        id="navbar"
       >
         <div className="container navbar-content">
           <div className="navbar-brand">

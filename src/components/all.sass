@@ -2,7 +2,7 @@
 @import "~bulma/sass/utilities/initial-variables"
 html
   overflow-y: auto !important
-  
+  background: #FFFCF3 !important
 body
   background: #FFFCF3 !important
   font-family: 'Roboto Mono', monospace;
@@ -25,6 +25,10 @@ textarea:focus
     background: #FFFCF3 !important
     display: flex
     align-items: center
+    position: fixed !important
+    top: 0px
+    width: 100% 
+    transition: all 0.1s linear
     @media screen and (max-width: 1023px)
       height: auto
 .navbar-content
@@ -191,9 +195,10 @@ $menu-label-color: $white-ter
 
 // about
 .about
-  padding: 70px 0px 100px
+  padding: 210px 0px 100px
   min-height: calc( 100vh - 188px )
   @media screen and (max-width: 1023px)
+    padding: 70px 0px 100px
     min-height: calc( 100vh - 110px )
 .about .header
   display: flex
@@ -227,6 +232,7 @@ $menu-label-color: $white-ter
   position: relative
   width: 436px
   height: 230px
+  font-family: Roboto Mono
   @media screen and (max-width: 1216px)
     margin-top: 50px
   @media screen and (max-width: 500px)
@@ -242,6 +248,7 @@ $menu-label-color: $white-ter
   padding: 35px
   text-align: center
   background: #F0ECE0
+  box-shadow: 2px 3px 0px #E0D6B8
   @media screen and (max-width: 500px)
     height: auto
     width: 100%
@@ -265,7 +272,8 @@ $menu-label-color: $white-ter
   padding: 10px
   margin-top: 10px
   margin-bottom: 20px
-
+  box-shadow: 2px 3px 0px #E0D6B8
+  border: none
 .about .aboutButton
   background: #77599E
   font-size: 20px
@@ -276,20 +284,23 @@ $menu-label-color: $white-ter
   justify-content: center
   line-height: 27px
   cursor: pointer
+  box-shadow: 2px 2px 0px #492775
 .about .description
   margin-top: 60px
   font-size: 20px
   line-height: 30px
   color: #78599E
+  font-family: Roboto Mono
   @media screen and (max-width: 1023px)
     padding: 0 30px
 // about
 
 // portfolio
 .portfolio
-  padding: 0px 0px 70px
+  padding: 140px 0px 70px
   min-height: calc( 100vh - 188px )
   @media screen and (max-width: 1023px)
+    padding: 0px 0px 100px
     min-height: calc( 100vh - 110px )
 .portfolio .portfolio-title
   margin-left: 8px
@@ -315,6 +326,7 @@ $menu-label-color: $white-ter
 .portfolio .portfolio-list
   display: flex
   flex-wrap: wrap
+  font-family: Roboto Mono
   @media screen and (max-width: 1023px)
     padding: 0 30px
     justify-content: center
@@ -337,9 +349,10 @@ $menu-label-color: $white-ter
 
 // writing
 .writing
-  padding: 40px 0px 100px
+  padding: 180px 0px 100px
   min-height: calc( 100vh - 188px )
   @media screen and (max-width: 1023px)
+    padding: 40px 0px 100px
     min-height: calc( 100vh - 110px )
 .writing .header
   display: flex
@@ -365,7 +378,7 @@ $menu-label-color: $white-ter
 .writing .header-left-item
   padding: 40px 0 16px
   border-bottom: 1px solid #D9CBA1
-
+  font-family: Roboto Mono
 .writing .header-left-item-title
   font-weight: 500
   font-size: 24px
@@ -444,9 +457,10 @@ $menu-label-color: $white-ter
 
 // contact
 .contact
-  padding: 40px 0px 100px
+  padding: 180px 0px 100px
   min-height: calc( 100vh - 188px )
   @media screen and (max-width: 1023px)
+    padding: 40px 0px 100px
     min-height: calc( 100vh - 110px )
 .contact .header
   display: flex
@@ -498,6 +512,8 @@ $menu-label-color: $white-ter
   padding: 35px
   text-align: left
   background: #F0ECE0
+  font-family: Roboto Mono
+  box-shadow: 2px 3px 0px #E0D6B8
   @media screen and (max-width: 500px)
     width: 100%
 // .contact .absolute
@@ -525,11 +541,15 @@ $menu-label-color: $white-ter
   width: 180px
   height: 30px
   margin-right: 12px 
+  box-shadow: 2px 3px 0px #E0D6B8
+  border: none
   @media screen and (max-width: 500px)
   width: calc( 100% - 8px )
 .contact .lastName .aboutInput
   width: 180px
   height: 30px
+  box-shadow: 2px 3px 0px #E0D6B8
+  border: none
   @media screen and (max-width: 500px)
   width: calc( 100% - 2px )
 .contact .email .emailInput
@@ -537,14 +557,16 @@ $menu-label-color: $white-ter
   height: 38px
   width: calc( 100% - 1px )
   padding: 10px
-
+  box-shadow: 2px 3px 0px #E0D6B8
+  border: none
 .contact  .messageName .messageInput
   font-size: 20px
   height: 120px !important
   width: calc( 100% - 1px ) !important
   resize: none
   padding: 10px
-
+  box-shadow: 2px 3px 0px #E0D6B8
+  border: none
 .contact .aboutInput 
   height: 50px
   width: 100% 
@@ -564,6 +586,7 @@ $menu-label-color: $white-ter
   justify-content: center
   line-height: 27px
   cursor: pointer
+  box-shadow: 2px 2px 0px #492775
 // contact
 
 
