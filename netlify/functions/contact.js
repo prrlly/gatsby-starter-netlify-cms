@@ -7,18 +7,25 @@ client.setConfig({
   server: "us8",
 });
 
-const addEmailToMailchimp = async (email) => {
+const addEmailToMailchimp = async (email, first_name, last_name, message) => {
   const response = await client.lists.addListMember("23b4ecb68f", {
     email_address: email,
-    tags: ["subscribe"],
+    tags: ["contact"],
     status: "subscribed",
+    merge_fields: {
+      FNAME: first_name,
+      LNAME: last_name,
+      MESSAGE: message
+    }
   });
   return response
 };
 
 module.exports.handler = async function(event, context) {
-  const { email } = event.queryStringParameters
-  const res = await addEmailToMailchimp(email)
+  const { email, first_name, last_name, message } = event.queryStringParameters
+  console.log("event.queryStringParameters", event.queryStringParameters)
+  const res = await addEmailToMailchimp(email, first_name, last_name, message)
+  console.log("res", res)
   if (res.status === "subscribed") {
     return {
       // return null to show no errors
