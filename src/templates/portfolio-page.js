@@ -76,7 +76,7 @@ export const ProductPageTemplate = ({frontmatter}) => {
           <div className="portfolio-line"></div>
         </div>
         <div className="portfolio-list">
-          {
+          {/* {
             frontmatter.CryptoMasterFund.list.map(item=>{
             // list.map(item=>{
               return (
@@ -92,14 +92,14 @@ export const ProductPageTemplate = ({frontmatter}) => {
                 </div>
               )
             })
-          }
+          } */}
         </div>
         <div className="portfolio-title">
           <div className="portfolio-titleText">Non-Fungible Collective</div>
           <div className="portfolio-line"></div>
         </div>
         <div className="portfolio-list">
-          {
+          {/* {
             frontmatter.NonFungibleCollective.list.map(item=>{
             // list1.map(item=>{
               return (
@@ -115,7 +115,7 @@ export const ProductPageTemplate = ({frontmatter}) => {
                 </div>
               )
             })
-          }
+          } */}
         </div>
       </section>
     </div>
@@ -155,30 +155,7 @@ export const productPageQuery = graphql`
             gatsbyImageData(quality: 100, layout: FULL_WIDTH)
           }
         }
-        heading
         description
-        CryptoMasterFund {
-          title
-          list {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 200)
-              }
-            }
-            text
-          }
-        }
-        NonFungibleCollective {
-          title
-          list {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 200)
-              }
-            }
-            text
-          }
-        }
       }
     }
   }

@@ -65,16 +65,18 @@ class BlogRollTemplate extends React.Component {
               <div className="header-left-title">Writing</div>
               <div className="header-left-line"></div>
               {
-                list.map((item)=>{
+                posts.map((item)=>{
+                  const frontmatter = item.node.frontmatter
                   return (
+                    <Link to={item.node.fields.slug}>
                     <div className="header-left-item"> 
                       <div className="header-left-item-title"> 
-                        {item.title}
+                        {frontmatter.title}
                       </div>
                       <div className="header-left-item-content">
                         <div>
-                          <div>{item.team}</div>
-                          <div>{item.data}</div>
+                          <div>{frontmatter.author}</div>
+                          <div>{frontmatter.date}</div>
                         </div>
                         <div>
                           <img
@@ -84,6 +86,7 @@ class BlogRollTemplate extends React.Component {
                         </div>
                       </div>
                     </div>
+                    </Link>
                   )
                 })
               }
@@ -160,6 +163,7 @@ export default function BlogRoll() {
                 }
                 frontmatter {
                   title
+                  author
                   templateKey
                   date(formatString: "MMMM DD, YYYY")
                   featuredpost

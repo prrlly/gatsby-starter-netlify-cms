@@ -21,6 +21,13 @@ export default class Index extends React.Component {
 
   submit = () => {
     console.log(this.state)
+    fetch(`/.netlify/functions/contact?email=${this.state.email}&&first_name=${this.state.first_name}&&last_name=${this.state.last_name}&&message=${this.state.message}`)
+      .then(response => response.json())
+      .then((res) => {
+        if (res.status === "OK") {
+          alert("subscribe success")
+        }
+      })
   };
 
   handleChange = (e) => {
@@ -84,9 +91,9 @@ export default class Index extends React.Component {
                       <input
                         className="aboutInput"
                         type={"text"}
-                        name={"firstName"}
+                        name={"first_name"}
                         onChange={(e)=>{this.handleChange(e)}}
-                        id={"firstName"}
+                        id={"first_name"}
                       />
                     </div>
                     <div className="lastName">
@@ -94,9 +101,9 @@ export default class Index extends React.Component {
                       <input
                         className="aboutInput"
                         type={"text"}
-                        name={"lastName"}
+                        name={"last_name"}
                         onChange={(e)=>{this.handleChange(e)}}
-                        id={"lastName"}
+                        id={"last_name"}
                       />
                     </div>
                   </div>
