@@ -19,14 +19,16 @@ const Navbar = class extends React.Component {
   handleScroll=(event)=>{
     let scrollTop  = document.documentElement.scrollTop;  //滚动条滚动高度
     let nav = document.getElementById("navbar");
+    let logo = document.getElementById("logo");
     if(typeof window !== 'undefined' && window.innerWidth > 1023){
       if(scrollTop>80){
         nav.style.height = '70px'
+        logo.style.height = '40px'
       }else{
         nav.style.height = '140px'
+        logo.style.height = '52px'
       }
     }
-
 }
 
   toggleHamburger() {
@@ -60,7 +62,7 @@ const Navbar = class extends React.Component {
         <div className="container navbar-content">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item navbar-logo" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: "137px", height: "52px" }} />
+              <img src={logo} id="logo" alt="Kaldi" style={{ width: "137px", height: "52px" }} />
             </Link>
             {/* Hamburger menu */}
             <div
