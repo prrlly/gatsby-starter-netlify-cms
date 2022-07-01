@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio-page
-name: STEPN
+name: STETPN
 type: Crypto Master Fund
 image: /img/blog-index.jpg
 ---
