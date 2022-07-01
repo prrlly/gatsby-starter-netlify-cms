@@ -63,7 +63,7 @@ export default class Index extends React.Component {
                     src={email}
                     alt="email"
                   />
-                  <div>contact@principle.ventures</div>
+                  <div><a href="mailto:contact@principle.ventures">contact@principle.ventures</a></div>
                 </div>
                 <div className="header-left-title marginTop">Social</div>
                 <div className="header-left-line"></div>
@@ -72,14 +72,14 @@ export default class Index extends React.Component {
                     src={twitter}
                     alt="twitter"
                   />
-                  <div>https://twitter.com/PrincipleVC</div>
+                  <div><a href="https://twitter.com/PrincipleVC" target="_blank">https://twitter.com/PrincipleVC</a></div>
                 </div>
                 <div className="header-left-link">
                   <img
                     src={xyz}
                     alt="xyz"
                   />
-                  <div>https://1.mirror.xyz/</div>
+                  <div><a href="https://1.mirror.xyz/" target="_blank">https://1.mirror.xyz/</a></div>
                 </div>
               </div>
               <div className="form">

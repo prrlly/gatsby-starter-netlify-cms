@@ -10,53 +10,6 @@ class BlogRollTemplate extends React.Component {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
     console.log(posts)
-    const list = [
-      {
-        title: 'Principle’s first article, Principle’s first article,',
-        team: 'Principle Team',
-        data: 'May 29'
-      },
-      {
-        title: 'Principle’s first article, Principle’s first article,',
-        team: 'Principle Team',
-        data: 'May 29'
-      },
-      {
-        title: 'Principle’s first article, Principle’s first article,',
-        team: 'Principle Team',
-        data: 'May 29'
-      },
-      {
-        title: 'Principle’s first article, Principle’s first article,',
-        team: 'Principle Team',
-        data: 'May 29'
-      },
-    ]
-    const rightList = [
-      {
-        'img': ItemImg,
-        'name':'Savage Dogs',
-        'time':'1 hour ago',
-        'altName':'@asdddjhhasd',  
-        'desc':'Big news. Stop running #StepN shoes! Better use this method, it will count your steps, while you will be sitting at home. Check out the video✅',  
-      },
-      {
-        'img': ItemImg,
-        'name':'Savage Dogs',
-        'time':'1 hour ago',
-        'altName':'@asdddjhhasd',  
-        'desc':'Big news. Stop running #StepN shoes! Better use this method, it will count your steps, while you will be sitting at home. Check out the video✅',  
-      },
-      {
-        'img': ItemImg,
-        'name':'Savage Dogs',
-        'time':'1 hour ago',
-        'altName':'@asdddjhhasd',  
-        'desc':'Big news. Stop running #StepN shoes! Better use this method, it will count your steps, while you will be sitting at home. Check out the video✅',  
-        'bigImg': ItemImg
-      },
-
-    ]
     return (
       <section className="section writing">
         <div className="container">
@@ -68,7 +21,7 @@ class BlogRollTemplate extends React.Component {
                 posts.map((item)=>{
                   const frontmatter = item.node.frontmatter
                   return (
-                    <Link to={item.node.fields.slug}>
+                    <Link to={frontmatter.external || item.node.fields.slug}>
                     <div className="header-left-item"> 
                       <div className="header-left-item-title"> 
                         {frontmatter.title}
@@ -92,43 +45,7 @@ class BlogRollTemplate extends React.Component {
               }
               <div className="header-left-more">Read more..</div>
             </div>
-            <div className="form">
-              {
-                rightList.map((item)=>{
-                  return (
-                    <div className="form-item">
-                      <div className="form-item-left">
-                        <img
-                          src={item.img}
-                          alt="left"
-                        />
-                      </div>
-                      <div className="form-item-right">
-                        <div className="form-item-right-header">
-                          <div className="form-item-name">{item.name}</div>
-                          <div className="form-item-time">{item.time}</div>
-                        </div>
-                        <div className="form-item-altName">{item.altName}</div>
-                        <div className="form-item-desc">
-                            {item.desc}
-                        </div>
-                        {
-                          item.bigImg?
-                          <div className="form-item-bigImg">
-                              <img
-                              src={item.bigImg}
-                              alt="bigImg"
-                            />
-                          </div>
-                          :null
-                        }
-                      </div>
-                    </div>
-                  )
-                })
-              }
-              <div className="form-button">Read 212 replies</div>
-            </div>
+            <blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">To celebrate the Writing NFT launch as a paradigm shift of quantifiable writing value, we collected some of articles via NFT by some influenced builders in the industry at launch, and would like to share the list here for anyone who&#39;re also interested: <a href="https://t.co/gKqoobkjCN">https://t.co/gKqoobkjCN</a></p>&mdash; Principle Ventures (@PrincipleVC) <a href="https://twitter.com/PrincipleVC/status/1529840713730490369?ref_src=twsrc%5Etfw">May 26, 2022</a></blockquote> 
           </div>
         </div>
       </section>
