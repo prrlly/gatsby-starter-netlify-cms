@@ -82,6 +82,7 @@ export default function BlogRoll() {
                   title
                   author
                   templateKey
+                  external
                   date(formatString: "MMMM DD, YYYY")
                   featuredpost
                   featuredimage {

@@ -4,6 +4,8 @@ import Layout from "../../components/Layout";
 import email from "../../img/social/email.svg";
 import xyz from "../../img/social/xyz.svg";
 import twitter from "../../img/social/twitter.svg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // function encode(data) {
 //   return Object.keys(data)
@@ -25,8 +27,11 @@ export default class Index extends React.Component {
       .then(response => response.json())
       .then((res) => {
         if (res.status === "OK") {
-          alert("subscribe success")
+          toast.success("Success! ")
         }
+      })
+      .catch(() => {
+        toast.error("Please try again")
       })
   };
 
@@ -63,7 +68,7 @@ export default class Index extends React.Component {
                     src={email}
                     alt="email"
                   />
-                  <div><a href="mailto:contact@principle.ventures">contact@principle.ventures</a></div>
+                  <div><a style={{ color: "#494949" }} href="mailto:contact@principle.ventures">contact@principle.ventures</a></div>
                 </div>
                 <div className="header-left-title marginTop">Social</div>
                 <div className="header-left-line"></div>
@@ -72,14 +77,14 @@ export default class Index extends React.Component {
                     src={twitter}
                     alt="twitter"
                   />
-                  <div><a href="https://twitter.com/PrincipleVC" target="_blank">https://twitter.com/PrincipleVC</a></div>
+                  <div><a style={{ color: "#494949" }} href="https://twitter.com/PrincipleVC" target="_blank">https://twitter.com/PrincipleVC</a></div>
                 </div>
                 <div className="header-left-link">
                   <img
                     src={xyz}
                     alt="xyz"
                   />
-                  <div><a href="https://1.mirror.xyz/" target="_blank">https://1.mirror.xyz/</a></div>
+                  <div><a style={{ color: "#494949" }} href="https://1.mirror.xyz/" target="_blank">https://1.mirror.xyz/</a></div>
                 </div>
               </div>
               <div className="form">
@@ -133,6 +138,7 @@ export default class Index extends React.Component {
             </div>
           </div>
         </section>
+        <ToastContainer />
       </Layout>
     );
   }

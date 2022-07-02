@@ -2,7 +2,8 @@ import React,  { useState }  from "react";
 import PropTypes from "prop-types";
 
 import Layout from "../components/Layout";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const IndexPage = ({ data }) => {
   const [value, setValue] = useState('');
@@ -16,8 +17,11 @@ const IndexPage = ({ data }) => {
       .then(response => response.json())
       .then((res) => {
         if (res.status === "OK") {
-          alert("subscribe success")
+          toast.success("Success! ")
         }
+      })
+      .catch(() => {
+        toast.error("Please try again")
       })
   };
   return (
@@ -49,6 +53,7 @@ const IndexPage = ({ data }) => {
          
       </div>
     </section>
+    <ToastContainer />
     </Layout>
   );
 };
