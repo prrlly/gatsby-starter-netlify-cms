@@ -1,5 +1,3 @@
-site_url: http://localhost:8888/admin1
-display_url: http://localhost:8888/admin1
 backend:
   name: git-gateway
   branch: master

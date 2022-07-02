@@ -21,7 +21,7 @@ class BlogRollTemplate extends React.Component {
                 posts.map((item)=>{
                   const frontmatter = item.node.frontmatter
                   return (
-                    <Link to={frontmatter.external || item.node.fields.slug}>
+                    <Link target='_blank' to={frontmatter.external || item.node.fields.slug}>
                     <div className="header-left-item"> 
                       <div className="header-left-item-title"> 
                         {frontmatter.title}
@@ -45,7 +45,14 @@ class BlogRollTemplate extends React.Component {
               }
               <div className="header-left-more">Read more..</div>
             </div>
-            <blockquote class="twitter-tweet" data-theme="light"><p lang="en" dir="ltr">To celebrate the Writing NFT launch as a paradigm shift of quantifiable writing value, we collected some of articles via NFT by some influenced builders in the industry at launch, and would like to share the list here for anyone who&#39;re also interested: <a href="https://t.co/gKqoobkjCN">https://t.co/gKqoobkjCN</a></p>&mdash; Principle Ventures (@PrincipleVC) <a href="https://twitter.com/PrincipleVC/status/1529840713730490369?ref_src=twsrc%5Etfw">May 26, 2022</a></blockquote> 
+            <a class="twitter-timeline"
+              href="https://twitter.com/PrincipleVC"
+              data-width="40%"
+              data-height="40%"
+              data-tweet-limit="5"
+            >
+            Tweets by @PrincipleVC
+            </a>
           </div>
         </div>
       </section>
