@@ -12,7 +12,7 @@ const Footer = class extends React.Component {
     return (
       <footer className="footer has-background-black has-text-white-ter">
         <div className="content has-text-centered">
-        © Principle Ventures. All Rights Reserved. Terms of Use  |  Privacy Policy
+        © Principle Ventures. All Rights Reserved.
           {/* <img
             src={logo}
             alt="Kaldi"
