@@ -28,6 +28,8 @@ const Navbar = class extends React.Component {
         nav.style.height = '140px'
         logo.style.height = '52px'
       }
+    }else{
+      nav.style.height = 'auto'
     }
 }
 
