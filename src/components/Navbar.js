@@ -21,15 +21,13 @@ const Navbar = class extends React.Component {
     let nav = document.getElementById("navbar");
     let logo = document.getElementById("logo");
     if(typeof window !== 'undefined' && window.innerWidth > 1023){
-      if(scrollTop>80){
+      if(scrollTop>40){
         nav.style.height = '70px'
         logo.style.height = '40px'
       }else{
         nav.style.height = '140px'
         logo.style.height = '52px'
       }
-    }else{
-      nav.style.height = '70px'
     }
 }
 
