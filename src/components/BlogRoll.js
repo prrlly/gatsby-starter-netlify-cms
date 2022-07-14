@@ -21,29 +21,32 @@ class BlogRollTemplate extends React.Component {
                 posts.map((item)=>{
                   const frontmatter = item.node.frontmatter
                   return (
-                    <Link target='_blank' to={frontmatter.external || item.node.fields.slug}>
-                    <div className="header-left-item"> 
-                      <div className="header-left-item-title"> 
-                        {frontmatter.title}
-                      </div>
-                      <div className="header-left-item-content">
-                        <div>
-                          <div>{frontmatter.author}</div>
-                          <div>{frontmatter.date}</div>
+                    
+                      <div className="header-left-item"> 
+                        <Link target='_blank' to={frontmatter.external || item.node.fields.slug}>
+                          <div className="header-left-item-title"> 
+                            {frontmatter.title}
+                          </div>
+                        </Link>
+                        <div className="header-left-item-content">
+                          <div>
+                            <div>{frontmatter.author}</div>
+                            <div>{frontmatter.date}</div>
+                          </div>
+                          <div>
+                          <Link target='_blank' to={frontmatter.external || item.node.fields.slug}>
+                            <img
+                              src={right}
+                              alt="right"
+                            />
+                          </Link>
+                          </div>
                         </div>
-                        <div>
-                          <img
-                            src={right}
-                            alt="right"
-                          />
-                        </div>
                       </div>
-                    </div>
-                    </Link>
                   )
                 })
               }
-              <div className="header-left-more">Read more..</div>
+              {/* <div className="header-left-more">Read more..</div> */}
             </div>
             <a class="twitter-timeline"
               href="https://twitter.com/PrincipleVC"

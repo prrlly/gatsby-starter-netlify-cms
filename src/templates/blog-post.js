@@ -5,7 +5,8 @@ import { Helmet } from "react-helmet";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/Layout";
 import Content, { HTMLContent } from "../components/Content";
-
+import right from "../img/social/right-arrow.png";
+import { Router, Location, navigate} from "@reach/router"
 // eslint-disable-next-line
 export const BlogPostTemplate = ({
   content,
@@ -23,6 +24,7 @@ export const BlogPostTemplate = ({
       <div className="container content" style={{ paddingTop: "120px" }}>
         <div className="columns">
           <div className="column is-10 is-offset-1">
+            <div onClick={() => navigate(-1)} style={{ fontSize: "20px", display: "flex", alignItems: "center", color: "#78599E", cursor: "pointer" }}><img style={{ transform: "rotate(180deg)", marginRight: "8px" }} src={right} /></div>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
