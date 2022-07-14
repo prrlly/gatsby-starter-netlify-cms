@@ -53,6 +53,9 @@ textarea:focus
     padding: 10px 0px 10px !important
 .navbar-brand
   margin-left: 0 !important
+  box-sizing: border-box
+  @media screen and (max-width: 1023px)
+    border-bottom: 1px solid #494949
 .navbar-item
   font-size: 20px
   color: #78599E !important
@@ -73,9 +76,10 @@ textarea:focus
   justify-content: flex-end !important
 .navbar-logo
   padding: 0px !important
-#logo
-   @media screen and (max-width: 1023px)
-    height: 40px !important
+.logo
+    transition: 0.5s
+    @media screen and (max-width: 1023px)
+      height: 40px !important
 .has-text-centered
   width: 100%
 
