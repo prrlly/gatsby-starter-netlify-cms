@@ -29,11 +29,22 @@ const Navbar = class extends React.Component {
         logo.style.height = '52px'
       }
     }else{
+      if(scrollTop>40){
+        logo.style.transform  = 'scale(0.8)'
+      }else{
+        logo.style.transform  = 'scale(1)'
+      }
       nav.style.height = 'auto'
     }
 }
 
   toggleHamburger() {
+    let nav = document.querySelector(".navbar-brand");
+    if(!this.state.active){
+      nav.style.borderBottom = '1px solid transparent'
+    }else{
+      nav.style.borderBottom = '1px solid #494949'
+    }
     // toggle the active boolean in the state
     this.setState(
       {
@@ -64,7 +75,7 @@ const Navbar = class extends React.Component {
         <div className="container navbar-content">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item navbar-logo" title="Logo">
-              <img src={logo} id="logo" alt="Kaldi" style={{ width: "137px", height: "52px" }} />
+              <img src={logo} className="logo" id="logo" alt="Kaldi" style={{ width: "137px", height: "52px" }} />
             </Link>
             {/* Hamburger menu */}
             <div
