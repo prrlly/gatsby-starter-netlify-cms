@@ -23,12 +23,14 @@ export const ProductPageTemplate = ({list}) => {
               const { frontmatter } = item.node
               return (
                 <div className="portfolio-item">
-                  <div className="portfolio-item-top">  
-                    <GatsbyImage
-                      className="portfolio-item-img"
-                      image={frontmatter.image.childImageSharp.gatsbyImageData}
-                      alt="img"
-                    />
+                  <div className="portfolio-item-top">
+                    {frontmatter.image.childImageSharp ? (
+                      <GatsbyImage
+                        className="portfolio-item-img"
+                        image={frontmatter.image.childImageSharp.gatsbyImageData}
+                        alt="img"
+                      />
+                    ) : <img src={frontmatter.image.publicURL} />}
                   </div>
                   <div>{frontmatter.name}</div>
                 </div>
@@ -100,6 +102,7 @@ export const portfolioPageQuery = graphql`
               childImageSharp {
                 gatsbyImageData(quality: 100, layout: FULL_WIDTH)
               }
+              publicURL
             }
           }
         }
