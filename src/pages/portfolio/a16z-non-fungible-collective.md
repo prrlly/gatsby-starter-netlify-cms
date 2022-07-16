@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio-page
-name: A16z
-type: Non-Fungible Collective
-image: /img/flavor_wheel.jpg
+name: EthSwarm
+type: Crypto Master Fund
+image: /img/ethswarm.svg
 ---
