@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../../components/Layout";
 import { getImage, GatsbyImage } from "gatsby-plugin-image";
-
+import { Link } from 'gatsby'
 // eslint-disable-next-line
 export const ProductPageTemplate = ({list}) => {
   console.log("list", list)
@@ -22,12 +22,14 @@ export const ProductPageTemplate = ({list}) => {
             CryptoMasterFund.map(item=>{
               const { frontmatter } = item.node
               return (
-                <div className="portfolio-item">
-                  <div className="portfolio-item-top">
-                    <img src={frontmatter.image.publicURL} />
+                <Link target='_blank' to={frontmatter.Link}>
+                  <div className="portfolio-item">
+                    <div className="portfolio-item-top">
+                      <img src={frontmatter.image.publicURL} />
+                    </div>
+                    <div>{frontmatter.name}</div>
                   </div>
-                  <div>{frontmatter.name}</div>
-                </div>
+                </Link>
               )
             })
           }
@@ -41,17 +43,19 @@ export const ProductPageTemplate = ({list}) => {
             NonFungibleCollective.map(item=>{
               const { frontmatter } = item.node
               return (
-                <div className="portfolio-item">
-                  <div className="portfolio-item-top">
-                  <img src={frontmatter.image.publicURL} />
-                  {/* <GatsbyImage
-                      className="portfolio-item-img"
-                      image={frontmatter.image.childImageSharp.gatsbyImageData}
-                      alt="img"
-                    /> */}
+                <Link target='_blank' to={frontmatter.Link}>
+                  <div className="portfolio-item">
+                    <div className="portfolio-item-top">
+                    <img src={frontmatter.image.publicURL} />
+                    {/* <GatsbyImage
+                        className="portfolio-item-img"
+                        image={frontmatter.image.childImageSharp.gatsbyImageData}
+                        alt="img"
+                      /> */}
+                    </div>
+                    <div>{frontmatter.name}</div>
                   </div>
-                  <div>{frontmatter.name}</div>
-                </div>
+                </Link>
               )
             })
           }
@@ -93,6 +97,7 @@ export const portfolioPageQuery = graphql`
           frontmatter {
             name
             type
+            Link
             image {
               childImageSharp {
                 gatsbyImageData(
