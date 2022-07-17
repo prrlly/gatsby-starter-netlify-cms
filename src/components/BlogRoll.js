@@ -102,7 +102,6 @@ export default function BlogRoll() {
                         quality: 100
                         layout: CONSTRAINED
                       )
-
                     }
                   }
                 }

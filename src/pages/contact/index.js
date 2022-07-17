@@ -79,13 +79,13 @@ export default class Index extends React.Component {
                   />
                   <div><a style={{ color: "#494949" }} href="https://twitter.com/PrincipleVC" target="_blank">https://twitter.com/PrincipleVC</a></div>
                 </div>
-                <div className="header-left-link">
+                {/* <div className="header-left-link">
                   <img
                     src={xyz}
                     alt="xyz"
                   />
                   <div><a style={{ color: "#494949" }} href="https://1.mirror.xyz/" target="_blank">https://1.mirror.xyz/</a></div>
-                </div>
+                </div> */}
               </div>
               <div className="form">
                 <div className="font">
@@ -122,7 +122,7 @@ export default class Index extends React.Component {
                       id={"email"}
                     />
                   </div>
-                  <div className="messageName">
+                  <div className="messageName" style={{ marginTop: "25px" }}>
                     <div className="inputTitle">Message</div>
                     <textarea
                       className="messageInput"

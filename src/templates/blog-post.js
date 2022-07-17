@@ -15,6 +15,8 @@ export const BlogPostTemplate = ({
   tags,
   title,
   helmet,
+  date,
+  author
 }) => {
   const PostContent = contentComponent || Content;
 
@@ -24,10 +26,12 @@ export const BlogPostTemplate = ({
       <div className="container content" style={{ paddingTop: "120px" }}>
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <div onClick={() => navigate(-1)} style={{ fontSize: "20px", display: "flex", alignItems: "center", color: "#78599E", cursor: "pointer" }}><img style={{ transform: "rotate(180deg)", marginRight: "8px" }} src={right} /></div>
+            <div onClick={() => navigate(-1)} style={{ paddingTop: "6px", fontSize: "20px", display: "flex", alignItems: "center", color: "#78599E", cursor: "pointer" }}><img style={{ transform: "rotate(180deg)", marginRight: "8px" }} src={right} /></div>
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
+            <p>{date}</p>
+            <p>{author}</p>
             <p>{description}</p>
             <PostContent content={content} />
           </div>
@@ -65,6 +69,8 @@ const BlogPost = ({ data }) => {
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        date={post.frontmatter.date}
+        author={post.frontmatter.author}
       />
     </Layout>
   );
@@ -88,6 +94,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        author
       }
     }
   }

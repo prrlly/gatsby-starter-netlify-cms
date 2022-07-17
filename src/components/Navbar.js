@@ -24,9 +24,10 @@ const Navbar = class extends React.Component {
       if(scrollTop>40){
         nav.style.height = '70px'
         logo.style.height = '40px'
+        logo.style.width = "auto"
       }else{
         nav.style.height = '140px'
-        logo.style.height = '52px'
+        logo.style.height = '53px'
       }
     }else{
       if(scrollTop>40){
@@ -75,7 +76,7 @@ const Navbar = class extends React.Component {
         <div className="container navbar-content">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item navbar-logo" title="Logo">
-              <img src={logo} className="logo" id="logo" alt="Kaldi" style={{ width: "137px", height: "52px" }} />
+              <img src={logo} className="logo" id="logo" alt="Kaldi" style={{ width: "137px", height: "53px" }} />
             </Link>
             {/* Hamburger menu */}
             <div
