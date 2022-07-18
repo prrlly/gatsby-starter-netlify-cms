@@ -7,8 +7,8 @@ import { Link } from 'gatsby'
 // eslint-disable-next-line
 export const ProductPageTemplate = ({list}) => {
   console.log("list", list)
-  const CryptoMasterFund = list.filter(item => item.node.frontmatter.type === "Crypto Master Fund")
-  const NonFungibleCollective = list.filter(item => item.node.frontmatter.type === "Non-Fungible Collective")
+  const CryptoMasterFund = list.filter(item => item.node.frontmatter.type === "Crypto Master Fund").sort((pre, next) => pre.node.frontmatter.order - next.node.frontmatter.order)
+  const NonFungibleCollective = list.filter(item => item.node.frontmatter.type === "Non-Fungible Collective").sort((pre, next) => pre.node.frontmatter.order - next.node.frontmatter.order)
 
   return (
     <div className="content portfolio">
@@ -98,6 +98,7 @@ export const portfolioPageQuery = graphql`
             name
             type
             Link
+            order
             image {
               childImageSharp {
                 gatsbyImageData(

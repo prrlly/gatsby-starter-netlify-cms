@@ -20,6 +20,8 @@ const Navbar = class extends React.Component {
     let scrollTop  = document.documentElement.scrollTop;  //滚动条滚动高度
     let nav = document.getElementById("navbar");
     let logo = document.getElementById("logo");
+    let navBrand = document.getElementById("navbar-brand")
+
     if(typeof window !== 'undefined' && window.innerWidth > 1023){
       if(scrollTop>40){
         nav.style.height = '70px'
@@ -31,9 +33,18 @@ const Navbar = class extends React.Component {
       }
     }else{
       if(scrollTop>40){
-        logo.style.transform  = 'scale(0.8)'
+        nav.style.height = '70px'
+        logo.style.height = '40px'
+        logo.style.width = "auto"
+        navBrand.style.paddingTop = "6px"
+        navBrand.style.paddingBottom = "6px"
+        // logo.style.transform  = 'scale(0.8)'
       }else{
-        logo.style.transform  = 'scale(1)'
+        // logo.style.transform  = 'scale(1)'
+        nav.style.height = '140px'
+        logo.style.height = '53px'
+        navBrand.style.paddingTop = "12px"
+        navBrand.style.paddingBottom = "12px"
       }
       nav.style.height = 'auto'
     }
@@ -74,7 +85,7 @@ const Navbar = class extends React.Component {
         id="navbar"
       >
         <div className="container navbar-content">
-          <div className="navbar-brand">
+          <div className="navbar-brand" id="navbar-brand" >
             <Link to="/" className="navbar-item navbar-logo" title="Logo">
               <img src={logo} className="logo" id="logo" alt="Kaldi" style={{ width: "137px", height: "53px" }} />
             </Link>

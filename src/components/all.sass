@@ -54,11 +54,13 @@ textarea:focus
   @media screen and (max-width: 1023px)
     padding: 10px 0px 10px !important
 .navbar-brand
+  transition: 0.5s
   margin-left: 0 !important
   box-sizing: border-box
   @media screen and (max-width: 1023px)
-    padding-top: 4px
-    padding-bottom: 4px
+    padding-left: 30px
+    padding-top: 12px
+    padding-bottom: 12px
     border-bottom: 1px solid #494949
 .navbar-item
   font-size: 20px
@@ -84,7 +86,7 @@ textarea:focus
     transition: 0.5s
     ransform-origin: left !important
     @media screen and (max-width: 1023px)
-      height: 40px !important
+      // height: 40px !important
 .has-text-centered
   width: 100%
 
@@ -231,8 +233,9 @@ $menu-label-color: $white-ter
   color: #494949
   margin-bottom:22px
   @media screen and (max-width: 1023px)
-    font-size: 30px
     padding: 0 30px
+  @media screen and (max-width: 767px)
+    font-size: 30px
 .about .title-right
    font-weight: 400
 .about .desc
@@ -241,6 +244,8 @@ $menu-label-color: $white-ter
   color: #220932
   @media screen and (max-width: 1023px)
     padding: 0 30px
+  @media screen and (max-width: 767px)
+    font-size: 22px
 .about .desc-right
   color: #78599E
 .about .form
@@ -318,8 +323,10 @@ $menu-label-color: $white-ter
   @media screen and (max-width: 1023px)
     padding: 20px 0px 100px
     min-height: calc( 100vh - 110px )
-.portfolio .portfolio-title
-  margin-left: 8px
+.portfolio-list
+  display: grid
+  grid-template-columns: repeat(4,minmax(0,1fr))
+  gap: 14px
 .portfolio .portfolio-titleText
   font-family: "Roboto"
   margin-top: 70px
@@ -331,7 +338,7 @@ $menu-label-color: $white-ter
   @media screen and (max-width: 1023px)
     text-align: center
 .portfolio .portfolio-line
-  width: 288px
+  width: 276px
   border-bottom: 5px solid #78599E
   margin-bottom: 20px
   font-size: 20px
@@ -344,15 +351,13 @@ $menu-label-color: $white-ter
   display: flex
   flex-wrap: wrap
   font-family: Roboto Mono
-  max-width: 1200px
   @media screen and (max-width: 1023px)
     padding: 0 30px
     justify-content: center
 .portfolio .portfolio-item
-  width: 252px
+  width: 276px
   height: 207px
   background: #F0ECE0
-  margin: 8px
   color: #78599E
   text-align: center
   display: flex
@@ -366,9 +371,11 @@ $menu-label-color: $white-ter
   align-items: center
   justify-content: center
   height: 120px
+  padding: 10px
   img
-    max-height: 40px
-    width: auto
+    height: 80px
+    width: 70%
+    object-fit: contain
 // portfolio
 
 // writing
@@ -392,6 +399,7 @@ $menu-label-color: $white-ter
     margin: 0 30px
     width: calc( 100% - 60px )
 .writing .header-left-title
+  font-family: "Roboto"
   margin-top: 30px
   margin-bottom: 20px
   font-size: 25px
@@ -500,6 +508,7 @@ $menu-label-color: $white-ter
     margin: 0 30px
     width: calc( 100% - 60px )
 .contact .header-left-title
+  font-family: "Roboto"
   margin-top: 30px
   margin-bottom: 20px
   font-size: 25px
@@ -552,6 +561,7 @@ $menu-label-color: $white-ter
 //   @media screen and (max-width: 500px)
 //     display: none
 .contact .formTitle
+  font-family: "Roboto"
   font-weight: 400
   font-size: 25px
   line-height: 27px
