@@ -4,5 +4,5 @@ order: 14
 Link: https://www.oorbit.tv/
 name: Oorbit
 type: Crypto Master Fund
-image: /img/oorbit.webp
+image: /img/wechatimg616.png
 ---
