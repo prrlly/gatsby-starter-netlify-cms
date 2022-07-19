@@ -49,7 +49,7 @@ const IndexPage = ({ data }) => {
             <div className="absolute"></div>
           </div>
         </div>
-        <div className="description">Principle Ventures is a native Web3 firm based on data-driven research and BUILD-focused practice, mainly active in crypto innovation investment and digital assets management. We co-build the digital future together with the brightest minds in the industry, support mission-driven builders for excellent engineering and networking, and assist teams strategically in whole growth for a long-term success. We partner with teams to explore possibilities in the full Web3 stack powered by crypto technologies. </div>
+        <div className="description"><b>Principle Ventures</b> is a native Web3 firm based on research-driven practice for innovation fabric building, more active in crypto innovation investment and digital assets management. We co-build the digital future together with the brightest minds in the industry, support mission-driven founders working on outstanding engineering and constructive networking,  assist teams strategically in whole growth for a long-term success. We partner with teams as a tech outpost to explore possibilities in the full Web3 stack powered by crypto technologies.</div>
          
       </div>
     </section>
