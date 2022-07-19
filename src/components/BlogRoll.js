@@ -22,7 +22,7 @@ class BlogRollTemplate extends React.Component {
                   const frontmatter = item.node.frontmatter
                   return (
                     
-                      <div className="header-left-item"> 
+                      <div className="header-left-item" style={{ display: frontmatter.isShow ? "block" :"none" }}> 
                         <Link target='_blank' to={frontmatter.external || item.node.fields.slug}>
                           <div className="header-left-item-title"> 
                             {frontmatter.title}
@@ -94,6 +94,7 @@ export default function BlogRoll() {
                   templateKey
                   external
                   date(formatString: "MMMM DD, YYYY")
+                  isShow
                 }
               }
             }
