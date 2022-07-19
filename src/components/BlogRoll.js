@@ -94,16 +94,6 @@ export default function BlogRoll() {
                   templateKey
                   external
                   date(formatString: "MMMM DD, YYYY")
-                  featuredpost
-                  featuredimage {
-                    childImageSharp {
-                      gatsbyImageData(
-                        width: 120
-                        quality: 100
-                        layout: CONSTRAINED
-                      )
-                    }
-                  }
                 }
               }
             }
