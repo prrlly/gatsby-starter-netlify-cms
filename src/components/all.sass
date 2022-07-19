@@ -59,10 +59,11 @@ textarea:focus
   box-sizing: border-box
   @media screen and (max-width: 1023px)
     padding-left: 30px
-    padding-top: 12px
-    padding-bottom: 12px
+    padding-top: 20px
+    padding-bottom: 20px
     border-bottom: 1px solid #494949
 .navbar-item
+  font-family: "Roboto"
   font-size: 20px
   color: #78599E !important
 .navbar-item:hover
@@ -214,7 +215,7 @@ $menu-label-color: $white-ter
   padding: 210px 0px 100px
   min-height: calc( 100vh - 188px )
   @media screen and (max-width: 1023px)
-    padding: 90px 0px 100px
+    padding: 110px 0px 100px
     min-height: calc( 100vh - 110px )
 .about .header
   display: flex
@@ -318,16 +319,28 @@ $menu-label-color: $white-ter
 
 // portfolio
 .portfolio
+  text-align: center
   padding: 140px 0px 70px
   min-height: calc( 100vh - 188px )
   @media screen and (max-width: 1023px)
-    padding: 20px 0px 100px
+    padding: 42px 0px 100px
     min-height: calc( 100vh - 110px )
+.portfolio-wraper
+  display: inline-block
 .portfolio-list
+  max-width: 1150px
   display: grid
   grid-template-columns: repeat(4,minmax(0,1fr))
   gap: 14px
+  @media screen and (max-width: 1023px)
+    grid-template-columns: repeat(3,minmax(0,1fr))
+  @media screen and (max-width: 767px)
+    grid-template-columns: repeat(2,minmax(0,1fr))
+  @media screen and (max-width: 461px)
+    grid-template-columns: repeat(1,minmax(0,1fr))
 .portfolio .portfolio-titleText
+  text-align: left
+  max-width: 300px
   font-family: "Roboto"
   margin-top: 70px
   font-weight: 400
@@ -337,7 +350,10 @@ $menu-label-color: $white-ter
   margin-bottom: 15px
   @media screen and (max-width: 1023px)
     text-align: center
+    margin-left: auto
+    margin-right: auto
 .portfolio .portfolio-line
+  text-align: left
   width: 276px
   border-bottom: 5px solid #78599E
   margin-bottom: 20px
@@ -345,11 +361,13 @@ $menu-label-color: $white-ter
   line-height: 24px
   text-align: center
   color: #78599E
+  @media screen and (max-width: 1240px)
+    width: 230px
   @media screen and (max-width: 1023px)
     margin: 0 auto 20px
+    text-align: center
+
 .portfolio .portfolio-list
-  display: flex
-  flex-wrap: wrap
   font-family: Roboto Mono
   @media screen and (max-width: 1023px)
     padding: 0 30px
@@ -363,6 +381,8 @@ $menu-label-color: $white-ter
   display: flex
   flex-direction: column
   justify-content: center
+  @media screen and (max-width: 1240px)
+    width: 230px
 .portfolio .portfolio-item-img
     width: 150px
 

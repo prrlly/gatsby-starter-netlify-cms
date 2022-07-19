@@ -43,8 +43,8 @@ const Navbar = class extends React.Component {
         // logo.style.transform  = 'scale(1)'
         nav.style.height = '140px'
         logo.style.height = '53px'
-        navBrand.style.paddingTop = "12px"
-        navBrand.style.paddingBottom = "12px"
+        navBrand.style.paddingTop = "20px"
+        navBrand.style.paddingBottom = "20px"
       }
       nav.style.height = 'auto'
     }

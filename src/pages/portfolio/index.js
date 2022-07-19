@@ -12,53 +12,55 @@ export const ProductPageTemplate = ({list}) => {
 
   return (
     <div className="content portfolio">
-      <section className="container ">
-        <div className="portfolio-title">
-          <div className="portfolio-titleText">Crypto Master Fund</div>
-          <div className="portfolio-line"></div>
-        </div>
-        <div className="portfolio-list">
-          {
-            CryptoMasterFund.map(item=>{
-              const { frontmatter } = item.node
-              return (
-                <Link target='_blank' to={frontmatter.Link}>
-                  <div className="portfolio-item">
-                    <div className="portfolio-item-top">
+      <section className="container">
+        <div className="portfolio-wraper">
+          <div className="portfolio-title">
+            <div className="portfolio-titleText">Crypto Master Fund</div>
+            <div className="portfolio-line"></div>
+          </div>
+          <div className="portfolio-list">
+            {
+              CryptoMasterFund.map(item=>{
+                const { frontmatter } = item.node
+                return (
+                  <Link target='_blank' to={frontmatter.Link}>
+                    <div className="portfolio-item">
+                      <div className="portfolio-item-top">
+                        <img src={frontmatter.image.publicURL} />
+                      </div>
+                      <div>{frontmatter.name}</div>
+                    </div>
+                  </Link>
+                )
+              })
+            }
+          </div>
+          <div className="portfolio-title">
+            <div className="portfolio-titleText">Non-Fungible Collective</div>
+            <div className="portfolio-line"></div>
+          </div>
+          <div className="portfolio-list">
+            {
+              NonFungibleCollective.map(item=>{
+                const { frontmatter } = item.node
+                return (
+                  <Link target='_blank' to={frontmatter.Link}>
+                    <div className="portfolio-item">
+                      <div className="portfolio-item-top">
                       <img src={frontmatter.image.publicURL} />
+                      {/* <GatsbyImage
+                          className="portfolio-item-img"
+                          image={frontmatter.image.childImageSharp.gatsbyImageData}
+                          alt="img"
+                        /> */}
+                      </div>
+                      <div>{frontmatter.name}</div>
                     </div>
-                    <div>{frontmatter.name}</div>
-                  </div>
-                </Link>
-              )
-            })
-          }
-        </div>
-        <div className="portfolio-title">
-          <div className="portfolio-titleText">Non-Fungible Collective</div>
-          <div className="portfolio-line"></div>
-        </div>
-        <div className="portfolio-list">
-          {
-            NonFungibleCollective.map(item=>{
-              const { frontmatter } = item.node
-              return (
-                <Link target='_blank' to={frontmatter.Link}>
-                  <div className="portfolio-item">
-                    <div className="portfolio-item-top">
-                    <img src={frontmatter.image.publicURL} />
-                    {/* <GatsbyImage
-                        className="portfolio-item-img"
-                        image={frontmatter.image.childImageSharp.gatsbyImageData}
-                        alt="img"
-                      /> */}
-                    </div>
-                    <div>{frontmatter.name}</div>
-                  </div>
-                </Link>
-              )
-            })
-          }
+                  </Link>
+                )
+              })
+            }
+          </div>
         </div>
       </section>
     </div>
