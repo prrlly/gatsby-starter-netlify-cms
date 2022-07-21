@@ -4,5 +4,5 @@ order: 5
 Link: https://gearbox.fi/
 name: Gearbox
 type: Crypto Master Fund
-image: /img/gearbox.png
+image: /img/gearbox-logo-blk.png
 ---
