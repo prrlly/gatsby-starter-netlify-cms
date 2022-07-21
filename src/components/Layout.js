@@ -39,10 +39,15 @@ const TemplateWrapper = ({ children }) => {
           color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:url" content="https://principle.ventures/" />
+        <meta name="twitter:image" content={image} />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="/" />
+        <meta property="og:url" content="https://principle.ventures/" />
+        <meta property="og:description" content={description} />
         <meta
           property="og:image"
           content={`${withPrefix("/")}img/og-image.png`}
