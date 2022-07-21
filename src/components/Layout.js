@@ -42,7 +42,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:url" content="https://principle.ventures/" />
-        <meta name="twitter:image" content={image} />
+        <meta name="twitter:image" content={`${withPrefix("/")}img/og-image.png`} />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
