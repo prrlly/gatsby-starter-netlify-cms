@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio-page
-order: 6
+order: 2
 Link: https://wilderworld.com/
 name: Wilder World
 type: Crypto Master Fund
