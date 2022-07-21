@@ -42,7 +42,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:url" content="https://principle.ventures/" />
-        <meta name="twitter:image" content={`${withPrefix("/")}img/og-image.png?t=1`} />
+        <meta name="twitter:image" content={`https://principle.ventures/img/og-image.png?t=1`} />
 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content={`${withPrefix("/")}img/og-image.png?t=1`}
+          content={`https://principle.ventures/img/og-image.png?t=1`}
         />
       </Helmet>
       <Navbar />
