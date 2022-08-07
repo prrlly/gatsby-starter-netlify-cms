@@ -29,9 +29,10 @@ export const BlogPostTemplate = ({
             <h1 className="font-roboto title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
-
-            <p>{date}</p>
-            <p>{author}</p>
+            <div style={{ marginBottom: "18px", color: "#78599E" }}>
+              <div>{date}</div>
+              <div>{author}</div>
+            </div>
             <p>{description}</p>
             <PostContent content={content} />
           </div>

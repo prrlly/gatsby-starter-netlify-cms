@@ -14,28 +14,27 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`${withPrefix("/")}img/apple-touch-icon.png`}
+          href={`https://principle.ventures/img/apple-touch-icon.png?v=2`}
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix("/")}img/favicon-32x32.png?t=1`}
+          href={`https://principle.ventures/img/favicon-32x32.png?v=2`}
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href={`${withPrefix("/")}img/favicon-16x16.png?t=1`}
+          href={`https://principle.ventures/img/favicon-16x16.png?v=2`}
           sizes="16x16"
         />
 
         <link
           rel="mask-icon"
-          href={`${withPrefix("/")}img/favicon-16x16.png?t=1`}
+          href={`https://principle.ventures/img/favicon-16x16.png?v=2`}
           color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />

@@ -5,7 +5,7 @@ import Layout from "../components/Layout";
 const NotFoundPage = () => (
   <Layout>
     <div className="content back container">
-      <h1>NOT FOUND</h1>
+      <h1>PAGE NOT FOUND</h1>
       <Link to='/'>
         <p className="backButton">Back</p>
       </Link>

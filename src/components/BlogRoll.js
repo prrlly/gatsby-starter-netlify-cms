@@ -22,9 +22,12 @@ class BlogRollTemplate extends React.Component {
                   const frontmatter = item.node.frontmatter
                   return (
                     
-                      <div className="header-left-item" style={{ display: frontmatter.isShow ? "block" :"none" }}> 
+                      <div
+                        className="header-left-item"
+                        style={{ display: frontmatter.isShow ? "block" :"none" }}
+                      > 
                         <Link target='_blank' to={frontmatter.external || item.node.fields.slug}>
-                          <div className="header-left-item-title"> 
+                          <div className="header-left-item-title font-roboto"> 
                             {frontmatter.title}
                           </div>
                         </Link>
@@ -48,14 +51,16 @@ class BlogRollTemplate extends React.Component {
               }
               {/* <div className="header-left-more">Read more..</div> */}
             </div>
-            <a class="twitter-timeline"
-              href="https://twitter.com/PrincipleVC"
-              data-width="40%"
-              data-height="40%"
-              data-tweet-limit="5"
-            >
-            Tweets by @PrincipleVC
-            </a>
+            <div className='header-right'>
+              <a className="twitter-timeline"
+                href="https://twitter.com/PrincipleVC"
+                data-width="100%"
+                data-height="100%"
+                data-tweet-limit="5"
+              >
+              Tweets by @PrincipleVC
+              </a>
+            </div>
           </div>
         </div>
       </section>

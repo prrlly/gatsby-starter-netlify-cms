@@ -50,7 +50,7 @@ textarea:focus
   align-items: center !important
 .navbar-start .navbar-item
   padding: 0px !important
-  margin: 0px 34px !important
+  margin: 0px 24px !important
   @media screen and (max-width: 1023px)
     padding: 10px 0px 10px !important
 .navbar-brand
@@ -194,7 +194,8 @@ $menu-label-color: $white-ter
 
 
 @import "~bulma"
-
+.container
+  max-width: 1146px !important
 
 // responsiveness
 +tablet-only
@@ -215,13 +216,16 @@ $menu-label-color: $white-ter
   padding: 210px 0px 100px
   min-height: calc( 100vh - 188px )
   @media screen and (max-width: 1023px)
-    padding: 110px 0px 100px
+    padding: 143px 0px 100px
     min-height: calc( 100vh - 110px )
+  @media screen and (max-width: 767px)
+    padding: 123px 0px 100px
 .about .header
   display: flex
   align-items: center
   justify-content: space-between
   @media screen and (max-width: 1216px)
+
     flex-wrap: wrap
     justify-content: center
 .about .header-left
@@ -236,6 +240,7 @@ $menu-label-color: $white-ter
   margin-bottom:22px
   @media screen and (max-width: 1023px)
     padding: 0 30px
+    margin-bottom: 17px
   @media screen and (max-width: 767px)
     font-size: 30px
 .about .title-right
@@ -244,7 +249,7 @@ $menu-label-color: $white-ter
   font-family: "Roboto"
   font-size: 30px
   line-height: 35px
-  color: #220932
+  color: #494949
   @media screen and (max-width: 1023px)
     padding: 0 30px
   @media screen and (max-width: 767px)
@@ -258,8 +263,9 @@ $menu-label-color: $white-ter
   font-family: Roboto Mono
   @media screen and (max-width: 1216px)
     margin-top: 50px
+    height: auto
   @media screen and (max-width: 500px)
-    margin: 50px 30px 0px
+    margin: 30px 30px 0px
     width: 100%
 .about .font
   // position: absolute
@@ -289,7 +295,7 @@ $menu-label-color: $white-ter
   line-height: 27px
   color: #78599E
 
-.about .aboutInput 
+.about .aboutInput
   height: 50px
   width: calc(100% - 4px) 
   font-size:20px
@@ -310,13 +316,15 @@ $menu-label-color: $white-ter
   cursor: pointer
   box-shadow: 2px 2px 0px #492775
 .about .description
-  margin-top: 60px
+  margin-top: 50px
   font-size: 20px
   line-height: 30px
   color: #78599E
   font-family: Roboto Mono
   @media screen and (max-width: 1023px)
     padding: 0 30px
+  @media screen and (max-width: 767px)
+    margin-top: 30px
 // about
 
 // portfolio
@@ -418,10 +426,15 @@ $menu-label-color: $white-ter
 .writing .header-left
   width: 50%
   margin-bottom: 10px
+  @media screen and (max-width: 1024px)
+    margin-bottom: 60px
   @media screen and (max-width: 500px)
-
     margin: 0 30px
     width: calc( 100% - 60px )
+.writing .header-right
+  width: 40%
+  @media screen and ( max-width: 1024px )
+    width: 50%
 .writing .header-left-title
   font-family: "Roboto"
   margin-top: 30px
@@ -652,11 +665,17 @@ $menu-label-color: $white-ter
 
 //404
 .back
-  padding: 280px 0px 100px
+  // padding: 280px 0px 100px
+  padding-top: 129px
   min-height: calc( 100vh - 58px )
   text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  // transform: translate(0, 129px)
   @media screen and (max-width: 1023px)
-    padding: 180px 0px 100px
+    // padding: 180px 0px 100px
     min-height: calc( 100vh - 110px )
 .backButton
   margin: 20px auto
