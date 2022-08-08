@@ -59,8 +59,8 @@ textarea:focus
   box-sizing: border-box
   @media screen and (max-width: 1023px)
     padding-left: 30px
-    padding-top: 20px
-    padding-bottom: 20px
+    padding-top: 12px
+    padding-bottom: 12px
     border-bottom: 1px solid #D9CBA1
 .navbar-item
   font-family: "Roboto"
@@ -84,10 +84,14 @@ textarea:focus
 .navbar-logo
   padding: 0px !important
 .logo
+    width: 137px
+    height: 53px
     transition: 0.5s
     ransform-origin: left !important
     @media screen and (max-width: 1023px)
       // height: 40px !important
+      width: 103.3px
+      height: 40px
 .has-text-centered
   width: 100%
 
@@ -392,7 +396,7 @@ $menu-label-color: $white-ter
   flex-direction: column
   justify-content: center
   @media screen and (max-width: 1240px)
-    width: 230px
+    // width: 230px
 .portfolio .portfolio-item-img
     width: 150px
 
@@ -430,11 +434,14 @@ $menu-label-color: $white-ter
     margin-bottom: 60px
   @media screen and (max-width: 500px)
     margin: 0 30px
+    margin-bottom: 60px
     width: calc( 100% - 60px )
 .writing .header-right
   width: 40%
   @media screen and ( max-width: 1024px )
     width: 50%
+  @media screen and ( max-width: 500px )
+    width: calc(100% - 60px)
 .writing .header-left-title
   font-family: "Roboto"
   margin-top: 30px
@@ -694,5 +701,19 @@ $menu-label-color: $white-ter
 
 .font-roboto
   font-family: "Roboto"
-
+.pagenation-content
+  margin-top: 70px
+  display: flex
+  align-items: center
+  justify-content: center
+  color: #78599E
+.pagenation-wraper
+  display: flex
+  font-weight: 500
+  .selected
+    font-weight: 600
+  li
+    margin: 0 10px
+.pagenation-wraper a
+  color: #78599E
 
