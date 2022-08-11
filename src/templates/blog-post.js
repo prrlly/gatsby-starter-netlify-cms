@@ -30,8 +30,8 @@ export const BlogPostTemplate = ({
               {title}
             </h1>
             <div style={{ marginBottom: "18px", color: "#78599E" }}>
-              <div>{date}</div>
               <div>{author}</div>
+              <div>{date}</div>
             </div>
             <p>{description}</p>
             <PostContent content={content} />
