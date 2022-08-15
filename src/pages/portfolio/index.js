@@ -14,10 +14,12 @@ export const ProductPageTemplate = ({list}) => {
     <div className="content portfolio">
       <section className="container">
         <div className="portfolio-wraper">
-          <div className="portfolio-title">
-            <div className="portfolio-titleText">Crypto Master Fund</div>
-            <div className="portfolio-line"></div>
-          </div>
+          {CryptoMasterFund.length ? (
+            <div className="portfolio-title">
+              <div className="portfolio-titleText">Crypto Master Fund</div>
+              <div className="portfolio-line"></div>
+            </div>
+          ) : ""}
           <div className="portfolio-list">
             {
               CryptoMasterFund.map(item=>{
@@ -35,10 +37,12 @@ export const ProductPageTemplate = ({list}) => {
               })
             }
           </div>
-          <div className="portfolio-title">
-            <div className="portfolio-titleText">Non-Fungible Collective</div>
-            <div className="portfolio-line"></div>
-          </div>
+          {NonFungibleCollective.length ? (
+            <div className="portfolio-title">
+              <div className="portfolio-titleText">Non-Fungible Collective</div>
+              <div className="portfolio-line"></div>
+            </div>
+          ) : ""}
           <div className="portfolio-list">
             {
               NonFungibleCollective.map(item=>{

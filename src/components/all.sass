@@ -233,7 +233,7 @@ $menu-label-color: $white-ter
     flex-wrap: wrap
     justify-content: center
 .about .header-left
-  @media screen and (max-width: 1216px)
+  @media screen and (max-width: 1100px)
     text-align: center
 .about .title
   font-family: "Roboto"
@@ -244,8 +244,8 @@ $menu-label-color: $white-ter
   margin-bottom:22px
   @media screen and (max-width: 1023px)
     padding: 0 30px
-    margin-bottom: 0px
   @media screen and (max-width: 767px)
+    margin-bottom: 0px
     font-size: 30px
 .about .title-right
    font-weight: 400
@@ -380,6 +380,8 @@ $menu-label-color: $white-ter
   @media screen and (max-width: 1023px)
     margin: 0 auto 20px
     text-align: center
+  @media screen and (max-width: 600px)
+    width:215px
 
 .portfolio .portfolio-list
   font-family: Roboto Mono
@@ -396,7 +398,9 @@ $menu-label-color: $white-ter
   flex-direction: column
   justify-content: center
   @media screen and (max-width: 1240px)
-    // width: 230px
+    width: 230px
+  @media screen and (max-width: 600px)
+    width: 215px
 .portfolio .portfolio-item-img
     width: 150px
 
@@ -713,7 +717,17 @@ $menu-label-color: $white-ter
   .selected
     font-weight: 600
   li
-    margin: 0 10px
-.pagenation-wraper a
-  color: #78599E
+    padding: 0 8px
+    margin: 0 3px
+    background: #F0ECE0
+    &:hover
+      background: #D9CBA1
+  a
+    color: #78599E
+  .pagenation-previous, .pagenation-next
+    background: transparent
+    &:hover
+      background: transparent
+  .pagenation-previous a, .pagenation-next a
+    color: #78599E
 

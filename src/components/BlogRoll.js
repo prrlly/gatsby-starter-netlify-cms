@@ -88,6 +88,8 @@ const BlogRollTemplate = (props) => {
                 previousLabel="<"
                 renderOnZeroPageCount={null}
                 className="pagenation-wraper"
+                previousClassName="pagenation-previous"
+                nextClassName="pagenation-next"
               />
               <span style={{cursor: "pointer" }} onClick={() => {
                 const pageNumber = Math.floor(posts.length / 5)
