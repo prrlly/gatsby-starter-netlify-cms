@@ -17,24 +17,24 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href={`https://principle.ventures/img/apple-touch-icon.png?v=2`}
+          href={`https://principle.ventures/img/apple-touch-icon.png?v=3`}
         />
         <link
           rel="icon"
           type="image/png"
-          href={`https://principle.ventures/img/favicon-32x32.png?v=2`}
+          href={`https://principle.ventures/img/favicon-32x32.png?v=3`}
           sizes="32x32"
         />
         <link
           rel="icon"
           type="image/png"
-          href={`https://principle.ventures/img/favicon-16x16.png?v=2`}
+          href={`https://principle.ventures/img/favicon-16x16.png?v=3`}
           sizes="16x16"
         />
 
         <link
           rel="mask-icon"
-          href={`https://principle.ventures/img/favicon-16x16.png?v=2`}
+          href={`https://principle.ventures/img/favicon-16x16.png?v=3`}
         />
         <meta name="theme-color" content="#fff" />
         <meta name="twitter:title" content={title} />
