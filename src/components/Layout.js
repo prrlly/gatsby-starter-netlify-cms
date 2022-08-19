@@ -35,7 +35,6 @@ const TemplateWrapper = ({ children }) => {
         <link
           rel="mask-icon"
           href={`https://principle.ventures/img/favicon-16x16.png?v=2`}
-          color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />
         <meta name="twitter:title" content={title} />
