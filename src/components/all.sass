@@ -233,12 +233,11 @@ $menu-label-color: $white-ter
   align-items: center
   justify-content: space-between
   @media screen and (max-width: 1216px)
-
-    flex-wrap: wrap
+    flex-direction: column
     justify-content: center
 .about .header-left
   margin-right: 10px
-  @media screen and (max-width: 1109px)
+  @media screen and (max-width: 1216px)
     margin-right: 0
     text-align: center
 .about .title
@@ -274,6 +273,8 @@ $menu-label-color: $white-ter
   @media screen and (max-width: 1216px)
     margin-top: 50px
     height: auto
+  @media screen and (max-width: 767px)
+    margin-top: 30px
   @media screen and (max-width: 500px)
     margin: 30px 30px 0px
     width: 100%
@@ -382,12 +383,12 @@ $menu-label-color: $white-ter
   text-align: center
   color: #78599E
   @media screen and (max-width: 1240px)
-    width: 230px
+    // width: 230px
   @media screen and (max-width: 1023px)
     margin: 0 auto 20px
     text-align: center
   @media screen and (max-width: 600px)
-    width:215px
+    // width:215px
 
 .portfolio .portfolio-list
   font-family: Roboto Mono
@@ -395,7 +396,8 @@ $menu-label-color: $white-ter
     padding: 0 30px
     justify-content: center
 .portfolio .portfolio-item
-  width: 276px
+  // width: 276px
+  max-width: 276px
   height: 207px
   background: #F0ECE0
   color: #78599E
@@ -404,9 +406,9 @@ $menu-label-color: $white-ter
   flex-direction: column
   justify-content: center
   @media screen and (max-width: 1240px)
-    width: 230px
+    // width: 230px
   @media screen and (max-width: 600px)
-    width: 215px
+    // width: 215px
 .portfolio .portfolio-item-img
     width: 150px
 
