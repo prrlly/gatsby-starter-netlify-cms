@@ -1,6 +1,6 @@
 ---
 templateKey: portfolio-page
-order: 13
+order: 17
 Link: https://tranching.com/
 name: Tranching Protocol
 type: Crypto Master Fund

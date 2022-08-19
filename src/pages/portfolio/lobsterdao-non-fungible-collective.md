@@ -1,8 +1,8 @@
 ---
 templateKey: portfolio-page
-order: 5
+order: 13
 Link: https://github.com/lobster-dao/overview
 name: LobsterDAO
-type: Non-Fungible Collective
+type: Crypto Master Fund
 image: /img/unnamed.jpeg
 ---
